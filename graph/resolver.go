@@ -4,7 +4,7 @@ package graph
 //
 // It serves as dependency injection for your app, add any dependencies you require here.
 
-import "github.com/devfullcycle/13-GraphQL/internal/database"
+import "github.com/santaniello/fullcycle-graphql/internal/database"
 
 type Resolver struct{
 	CategoryDB *database.Category

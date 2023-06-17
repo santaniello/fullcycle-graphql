@@ -7,8 +7,8 @@ import (
 	"database/sql"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/devfullcycle/13-GraphQL/graph"	
-	"github.com/devfullcycle/13-GraphQL/internal/database"
+	"github.com/santaniello/fullcycle-graphql/graph"	
+	"github.com/santaniello/fullcycle-graphql/internal/database"
 	_ "github.com/mattn/go-sqlite3"
 )
 
