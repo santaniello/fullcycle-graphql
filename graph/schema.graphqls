@@ -1,0 +1,45 @@
+# GraphQL schema 
+# https://gqlgen.com/getting-started/
+
+# ! Significa que o atributo é obrigatório
+
+# Abaixo criamos os nossos modelos que nossas APIS vão trabalhar
+
+type Category {
+  id: ID!
+  name: String!
+  description: String
+  courses: [Course!]!
+}
+
+type Course {
+  id: ID!
+  name: String!
+  description: String
+  category: Category!
+}
+
+# Abaixo criamos as entradas de dados. basicamente indicamos o que precisa para criar uma nova categoria e um novo curso !
+
+input NewCategory {
+  name: String!
+  description: String  
+}
+
+input NewCourse {
+  name: String!
+  description: String
+  categoryId: ID!
+}
+
+# Abaixo nós criamos uma Query de consulta que irá me trazer todas as categorias e todos os cursos !
+
+type Query{
+  categories: [Category!]!
+  courses: [Course!]!
+}
+
+type Mutation {
+   createCategory(input: NewCategory!): Category!
+   createCourse(input: NewCourse!): Course!
+}
